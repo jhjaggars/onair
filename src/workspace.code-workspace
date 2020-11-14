@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "201107-205820-nodemcuv2",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.inc": "cpp",
+			"*.tcc": "cpp",
+			"list": "cpp",
+			"functional": "cpp",
+			"random": "cpp",
+			"limits": "cpp",
+			"algorithm": "cpp",
+			"exception": "cpp",
+			"fstream": "cpp",
+			"iosfwd": "cpp",
+			"new": "cpp",
+			"ostream": "cpp",
+			"sstream": "cpp",
+			"streambuf": "cpp"
+		}
+	}
+}
