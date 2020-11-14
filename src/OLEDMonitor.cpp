@@ -9,10 +9,8 @@
 #include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
 
-#define MQTT_SERVER "192.168.4.53"
-#define MQTT_SERVERPORT 1883 // use 8883 for SSL
 #define LED D5
-#define VERSION "0.2.1"
+#define VERSION "0.2.2"
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -99,7 +97,7 @@ void setup()
   _println(VERSION);
 
   ESPhttpUpdate.setLedPin(LED_BUILTIN, LOW);
-  t_httpUpdate_return ret = ESPhttpUpdate.update(espClient, "http://192.168.4.53:8080/", VERSION);
+  t_httpUpdate_return ret = ESPhttpUpdate.update(espClient, UPDATE_SERVER, VERSION);
   Serial.println(ret);
 
   client.setServer(MQTT_SERVER, MQTT_SERVERPORT);
